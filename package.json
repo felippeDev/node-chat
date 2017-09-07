@@ -1,0 +1,32 @@
+{
+  "name": "node-chat",
+  "version": "1.0.0",
+  "description": "A multiroom chat developed with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felippeDev/node-chat.git"
+  },
+  "keywords": [
+    "Node.js",
+    "chat",
+    "multiroom-chat"
+  ],
+  "author": "felippeDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felippeDev/node-chat/issues"
+  },
+  "homepage": "https://github.com/felippeDev/node-chat#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-validator": "^4.1.1",
+    "socket.io": "^2.0.3"
+  }
+}
