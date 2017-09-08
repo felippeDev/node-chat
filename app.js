@@ -18,11 +18,3 @@ socketConnection.on('connection', (socket) => {
         console.log('User has disconnected')
     });
 });
-
-// socketConnection.on('connection', (socket) => {
-//     console.log('User has connected');
-
-//     socket.on('disconnect', () => {
-//         console.log('User has disconnected')
-//     });
-// });

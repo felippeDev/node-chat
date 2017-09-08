@@ -7,15 +7,15 @@ module.exports.startChat = (application, req, res) => {
         if (!errors.isEmpty()) {
             res.render('index', { validationErrors: errors.array() });
             return;
+        } else {
+            application.get('socketConnection').emit(
+                'userConnectedMessage',
+                {
+                    nickname: formData.nickname,
+                    message: 'Just entered on chat room...'
+                });
+
+            res.render('chat');
         }
-
-        // application.get('socketConnection').emit(
-        //     'userConnectedMessage',
-        //     {
-        //         nickname: formData.nickname,
-        //         message: ' has just logged connected..'
-        //     });
-
-        res.render('chat');
     });
 }
