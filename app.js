@@ -1,4 +1,4 @@
-const app = require('./config/server');
+const app = require(__dirname + '/config/server');
 const socketIO = require('socket.io');
 
 const port = process.env.PORT || 3000;
