@@ -8,7 +8,7 @@ const appPath = path.dirname(require.main.filename);
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', './app/views');
+app.set('views', appPath + '/views');
 
 app.use(express.static(appPath + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
