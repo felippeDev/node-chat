@@ -17,7 +17,6 @@ socketConnection.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('User has disconnected')
     });
-<<<<<<< HEAD
 
     socket.on('sendMessage', (data) => {
         socket.emit('receiveMessage', {
@@ -41,14 +40,3 @@ socketConnection.on('connection', (socket) => {
         };
     });
 });
-=======
-});
-
-// socketConnection.on('connection', (socket) => {
-//     console.log('User has connected');
-
-//     socket.on('disconnect', () => {
-//         console.log('User has disconnected')
-//     });
-// });
->>>>>>> parent of 5cb2e59... websocket still in progress

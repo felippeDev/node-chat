@@ -60,15 +60,7 @@
 	<div class="container">
 		<div class="row chat" id="chat">
 			<div class="col-md-1"></div>
-<<<<<<< HEAD
 			<div class="col-md-10" id="dialogs"></div>
-=======
-			<div class="col-md-10" id="dialogs">
-				<div class="dialogo">
-					<h4>Jorge</h4>
-					<p>Fala José, blz cara?</p>
-				</div>
->>>>>>> parent of 5cb2e59... websocket still in progress
 			<div class="col-md-1"></div>
 		</div>
 
@@ -82,7 +74,6 @@
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 		<div class="container">
 			<div class="panel-body campo-mensagem">
-<<<<<<< HEAD
 				<div class="col-md-12">
 					<div class="input-group">
 							<input type="hidden" id="userNickname" value="<%= formData.nickname %>">
@@ -91,16 +82,6 @@
 						<span class="input-group-btn">
 								<button type="button" id="btnSendMessage" class="btn btn-primary-inverse">Send</button>
 							</span>
-=======
-				<form>
-					<div class="col-md-12">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Mensagem">
-							<span class="input-group-btn">
-									<button class="btn btn-default" type="button">></button>
-								</span>
-						</div>
->>>>>>> parent of 5cb2e59... websocket still in progress
 					</div>
 				</div>
 			</div>
@@ -113,7 +94,6 @@
 	<script src="/socket.io/socket.io.js"></script>
 
 	<script type="text/javascript">
-<<<<<<< HEAD
 		// Socket behaviors
 		let socket = io('http://localhost:3000');
 
@@ -176,36 +156,6 @@
 			$("#navbar-collapse-1").attr("class","navbar-collapse collapse");
 			$("#btn_navbar_toggle").attr("aria-expanded","false");
 			$("#navbar-collapse-1").attr("aria-expanded","false");
-=======
-		let socket = io('http://localhost');
-
-		// socket.on('userConnectedMessage', (data) => {
-		// 	let connectedMessage = '';
-		// 	connectedMessage += '<h4>' + data.nickname + '</h4>';
-		// 	connectedMessage += '<p>' + data.message + '</p>';
-		// 	$('#dialogs .dialogo').append(connectedMessage);
-		// });
-
-		$(document).ready(function () {
-			$("#exibe_chat").click(function () {
-				$("#conversa").show();
-				$("#participantes").hide();
-				ocultaNavbar();
-			});
-
-			$("#exibe_participantes").click(function () {
-				$("#participantes").show();
-				$("#conversa").hide();
-				ocultaNavbar();
-			});
-		});
-
-		function ocultaNavbar() {
-			$("#btn_navbar_toggle").attr("class", "navbar-toggle collapsed");
-			$("#navbar-collapse-1").attr("class", "navbar-collapse collapse");
-			$("#btn_navbar_toggle").attr("aria-expanded", "false");
-			$("#navbar-collapse-1").attr("aria-expanded", "false");
->>>>>>> parent of 5cb2e59... websocket still in progress
 		}
 	</script>
 
