@@ -7,6 +7,7 @@ module.exports.startChat = (application, req, res) => {
         if (!errors.isEmpty()) {
             res.render('index', { validationErrors: errors.array() });
             return;
+<<<<<<< HEAD
         } else {
             application.get('socketConnection').emit(
                 'receiveMessage',
@@ -16,6 +17,17 @@ module.exports.startChat = (application, req, res) => {
                 });
 
             res.render('chat', { formData: formData });
+=======
+>>>>>>> parent of 5cb2e59... websocket still in progress
         }
+
+        // application.get('socketConnection').emit(
+        //     'userConnectedMessage',
+        //     {
+        //         nickname: formData.nickname,
+        //         message: ' has just logged connected..'
+        //     });
+
+        res.render('chat');
     });
 }
