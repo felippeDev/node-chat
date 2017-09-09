@@ -6,16 +6,16 @@ const expressValidator = require('express-validator');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/app/views');
+app.set('views', __dirname + '/views');
 
-app.use(express.static(__dirname + './app/public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 
 consign()
-    .include('./app/routes')
-    .then('./app/models')
-    .then('./app/controllers')
+    .include('/routes')
+    .then('/models')
+    .then('/controllers')
     .into(app);
 
 module.exports = app;
