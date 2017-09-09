@@ -17,4 +17,26 @@ socketConnection.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('User has disconnected')
     });
+
+    socket.on('sendMessage', (data) => {
+        socket.emit('receiveMessage', {
+            nickname: data.nickname,
+            message: data.message
+        });
+
+        socket.broadcast.emit('receiveMessage', {
+            nickname: data.nickname,
+            message: data.message
+        });
+
+        if(parseInt(data.userActive) === 0){
+            socket.emit('updateUserList', {
+                nickname: data.nickname
+            });
+        
+            socket.broadcast.emit('updateUserList', {
+                nickname: data.nickname
+            });    
+        };
+    });
 });

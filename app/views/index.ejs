@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Multiroom Chat</title>
+    <title>Node Chat</title>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
 
     <!-- JQUERY -->
     <script src="js/jquery-2.2.4.min.js"></script>
@@ -25,18 +33,18 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row-fluid user-row">
-                            <img src="images/multiroom_chat_2.png" class="img-responsive" alt="Multiroom Chat" />
+                            <h4>Node chat</h4>
                         </div>
                     </div>
                     <div class="panel-body">
-                        <form action="/chat" accept-charset="UTF-8" role="form" class="form-signin">
+                        <form action="/chat" method="POST" accept-charset="UTF-8" role="form" class="form-signin">
                             <fieldset>
                                 <label class="panel-login">
                                         <div class="login_result"></div>
                                     </label>
                                 <input class="form-control" name="nickname" placeholder="Nickname" id="nickname" type="text">
                                 <br></br>
-                                <input class="btn btn-lg btn-success btn-block" type="submit" id="btnSubmit" value="Enter">
+                                <input class="btn btn-lg btn-primary btn-block" type="submit" id="btnSubmit" value="Enter">
                             </fieldset>
                         </form>
                     </div>

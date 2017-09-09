@@ -9,13 +9,13 @@ module.exports.startChat = (application, req, res) => {
             return;
         } else {
             application.get('socketConnection').emit(
-                'userConnectedMessage',
+                'receiveMessage',
                 {
                     nickname: formData.nickname,
                     message: 'Just entered on chat room...'
                 });
 
-            res.render('chat');
+            res.render('chat', { formData: formData });
         }
     });
 }
