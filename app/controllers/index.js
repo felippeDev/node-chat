@@ -1,3 +1,3 @@
 module.exports.home = (application, req, res) => {
-    res.render('index', { validationErrors: {} });
+    res.render('index', { validationErrors: {}});
 }

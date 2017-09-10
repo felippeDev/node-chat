@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "A multiroom chat developed with Node.js",
   "main": "app.js",
+  "engines": {
+    "node": ">=6.11.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gcloud app deploy",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 const app = require(__dirname + '/config/server');
 const socketIO = require('socket.io');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const server = app.listen(port, () => {
     console.log('--------------------------- \n' +
         '--> Server listen on: ' + port);
