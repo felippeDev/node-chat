@@ -21,12 +21,12 @@ socketConnection.on('connection', (socket) => {
     socket.on('sendMessage', (data) => {
         socket.emit('receiveMessage', {
             nickname: data.nickname,
-            message: data.message
+            message: data.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")
         });
 
         socket.broadcast.emit('receiveMessage', {
             nickname: data.nickname,
-            message: data.message
+            message: data.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")
         });
 
         if(parseInt(data.userActive) === 0){
